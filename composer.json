@@ -1,0 +1,22 @@
+{
+    "name": "daurensky/winfreight-php-sdk",
+    "description": "PHP SDK for Winfreight API",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Daurensky\\WinfreightPhpSdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "daurensky",
+            "email": "dkambarov17@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1|^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "~5.0"
+    }
+}
