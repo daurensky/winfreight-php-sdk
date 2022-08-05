@@ -62,13 +62,13 @@ class Winfreight
 
     public function getServCode(array $query)
     {
-        $response = $this->authorizedClient->get('GetHubCode', compact('query'));
+        $response = $this->authorizedClient->get('GetServCode', compact('query'));
         return $this->resultSets($response->json());
     }
 
     public function createPortalWaybill(array $query)
     {
-        $response = $this->authorizedClient->post('GetHubCode', compact('query'));
+        $response = $this->authorizedClient->post('CreatePortalWaybill', compact('query'));
         return $this->resultSets($response->json());
     }
 
