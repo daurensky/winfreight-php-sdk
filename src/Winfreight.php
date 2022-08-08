@@ -72,6 +72,12 @@ class Winfreight
         return $this->resultSets($response->json());
     }
 
+    public function createParcel(array $query)
+    {
+        $response = $this->authorizedClient->post('createdims', compact('query'));
+        return $this->resultSets($response->json());
+    }
+
     protected function resultSets($json)
     {
         if (!$json) {
