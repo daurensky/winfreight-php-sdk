@@ -54,6 +54,12 @@ class Winfreight
             ->withExpiresIn(time() + $json['expires_in']);
     }
 
+    public function getTracking(array $query)
+    {
+        $response = $this->authorizedClient->get('GetTracking', compact('query'));
+        return $this->resultSets($response->json());
+    }
+
     public function getHubCodes(array $query)
     {
         $response = $this->authorizedClient->get('GetHubCode', compact('query'));
