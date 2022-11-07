@@ -80,7 +80,7 @@ class Winfreight
 
     public function createParcel(array $query)
     {
-        $response = $this->authorizedClient->post('createdims', compact('query'));
+        $response = $this->authorizedClient->post('CreatePortalParcel', compact('query'));
         return $this->resultSets($response->json());
     }
 
